@@ -337,9 +337,160 @@ roboport.enabled = false
 
 --oil proc
 local basicoil = data.raw.recipe["basic-oil-processing"]
-local advoil = data.raw.recipe["adv-oil-processing"]
+local advoil = data.raw.recipe["advanced-oil-processing"]
 
+basicoil.normal = nil
+basicoil.expensive = nil
+basicoil.energy_required = 5
+basicoil.enabled = false
+basicoil.ingredients = {{type="fluid", name="crude-oil", amount=100, fluidbox_index = 2}}
+basicoil.results = {{type="fluid", name="petroleum-gas", amount=45, fluidbox_index = 3}}
 
+advoil.normal = nil
+advoil.expensive = nil
+advoil.energy_required = 5
+advoil.enabled = false
+advoil.ingredients = {{type="fluid", name="water", amount=50},{type="fluid", name="crude-oil", amount=100}}
+advoil.results = {{type="fluid", name="heavy-oil", amount=25},{type="fluid", name="light-oil", amount=45},{type="fluid", name="petroleum-gas", amount=55}}
+data.raw.recipe["advanced-oil-processing"].icon = "__base__/graphics/icons/fluid/advanced-oil-processing.png"
+data.raw.recipe["advanced-oil-processing"].icon_size = 64
+
+-- transportation
+local car = data.raw.recipe["car"]
+local train = data.raw.recipe["locomotive"]
+
+car.normal = nil
+car.expensive = nil
+car.energy_required = 2
+car.ingredients = {{"engine-unit", 8},{"iron-plate", 20},{"steel-plate", 5}}
+car.result = "car"
+car.enabled = false
+
+train.normal = nil
+train.expensive = nil
+train.energy_required = 4
+train.ingredients = {{"engine-unit", 20},{"electronic-circuit", 10},{"steel-plate", 30}}
+train.result = "locomotive"
+train.enabled = false
+
+-- robot frame
+local robotbase = data.raw.recipe["flying-robot-frame"]
+robotbase.normal = nil
+robotbase.expensive = nil
+robotbase.energy_required = 20
+robotbase.result = "flying-robot-frame"
+robotbase.enabled = false
+robotbase.ingredients = {{"electric-engine-unit", 1},{"battery", 2},{"steel-plate", 1},{"electronic-circuit", 3}}
+
+-- turrets
+local gun = data.raw.recipe["gun-turret"]
+local laser = data.raw.recipe["laser-turret"]
+
+gun.normal = nil
+gun.expensive = nil
+gun.energy_required = 8
+gun.result = "gun-turret"
+gun.enabled = false
+gun.ingredients = {{"iron-gear-wheel", 10},{"copper-plate", 10},{"iron-plate", 20}}
+
+laser.normal = nil
+laser.expensive = nil
+laser.energy_required = 20
+laser.result = "laser-turret"
+laser.enabled = false
+laser.ingredients = {{"steel-plate", 20},{"electronic-circuit", 20},{"battery", 12}}
+
+-- gate
+local gate = data.raw.recipe["gate"]
+gate.normal = nil
+gate.expensive = nil
+gate.result = "gate"
+gate.enabled = false
+gate.ingredients = {{"stone-wall", 1}, {"steel-plate", 2}, {"electronic-circuit", 2}}
+
+-- lamp
+local lamp = data.raw.recipe["small-lamp"]
+lamp.normal = nil
+lamp.expensive = nil
+lamp.result = "small-lamp"
+lamp.enabled = false
+lamp.ingredients = {{"electronic-circuit", 1},{"copper-cable", 3},{"iron-plate", 1}}
+
+-- radar
+local radar = data.raw.recipe["radar"]
+radar.normal = nil
+radar.expensive = nil
+radar.result = "radar"
+radar.enabled = false
+radar.ingredients = {{"electronic-circuit", 5},{"iron-gear-wheel", 5},{"iron-plate", 10}}
+
+-- solar panel
+local solar = data.raw.recipe["solar-panel"]
+solar.normal = nil
+solar.expensive = nil
+solar.energy_required = 10
+solar.result = "solar-panel"
+solar.enabled = false
+solar.ingredients = {{"steel-plate", 5},{"electronic-circuit", 15},{"copper-plate", 5}}
+
+-- personal laser defense
+local armorlaser = data.raw.recipe["personal-laser-defense-equipment"]
+armorlaser.normal = nil
+armorlaser.expensive = nil
+armorlaser.energy_required = 10
+armorlaser.result = "personal-laser-defense-equipment"
+armorlaser.enabled = false
+armorlaser.ingredients = {{"processing-unit", 20},{"low-density-structure", 5},{"laser-turret", 5}}
+
+-- centrifuge
+local centrifuge = data.raw.recipe["centrifuge"]
+centrifuge.normal = nil
+centrifuge.expensive = nil
+centrifuge.energy_required = 4
+centrifuge.result = "centrifuge"
+centrifuge.enabled = false
+centrifuge.ingredients =
+{
+  {"concrete", 100},
+  {"steel-plate", 50},
+  {"advanced-circuit", 100},
+  {"iron-gear-wheel", 100}
+}
+
+-- modules
+local modules = {}
+local ranks = {"","-2","-3"}
+for _, type in ipairs({"productivity", "speed", "effectivity"}) do
+  for rank, suffix in ipairs(ranks) do 
+    log(type.."-module"..suffix)
+    local mod = data.raw.recipe[type.."-module"..suffix]
+    mod.normal = nil
+    mod.expensive = nil
+    mod.result = type.."-module"..suffix
+    mod.enabled = false
+    if rank == 1 then
+      mod.ingredients = {{"advanced-circuit", 5},{"electronic-circuit", 5}}
+      mod.energy_required = 15
+    elseif rank == 2 then
+      mod.ingredients = 
+      {
+        {type.."-module", 4},
+        {"advanced-circuit", 5},
+        {"processing-unit", 5}
+      }
+      mod.energy_required = 30
+    else
+      mod.ingredients = 
+      {
+        {type.."-module-2", 5},
+        {"advanced-circuit", 5},
+        {"processing-unit", 5}
+      }
+      mod.energy_required = 60
+    end
+    modules[type..rank] = mod
+  end
+end
 
 data:extend({
   circuit, stone_circuit, 
@@ -362,5 +513,17 @@ data:extend({
   pumpjack,
   pole1,pole2,pole3,pole4,
   roboport,
-  basicoil,advoil
+  basicoil,advoil,
+  car,train,
+  robotbase,
+  gun,laser,
+  gate,
+  lamp,
+  radar,
+  solar,
+  armorlaser,
+  centrifuge,
+  modules[speed1], modules[speed2], modules[speed3],
+  modules[productivity1], modules[productivity2], modules[productivity3],
+  modules[effectivity1], modules[effectivity2], modules[effectivity3]
 })
