@@ -1,16 +1,11 @@
-local circuit = data.raw.recipe["electronic-circuit"]
-local stone_circuit = data.raw.recipe["electronic-circuit-stone"]
-
 -- circuits
+local circuit = data.raw.recipe["electronic-circuit"]
 circuit.normal.ingredients = {{"iron-plate", 1},{"copper-cable", 3}}
 circuit.normal.enabled = true
 circuit.expensive.ingredients = {{"iron-plate", 2}, {"copper-cable", 8}}
 circuit.expensive.enabled = true
 
-stone_circuit.normal.enabled = false
-stone_circuit.expensive.enabled = false
-stone_circuit.normal.hidden = true
-stone_circuit.expensive.hidden = true
+data.raw.recipe["electronic-circuit-stone"] = nil
 
 -- repair pack
 local repair_pack = data.raw.recipe["repair-pack"]
