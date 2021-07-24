@@ -1,3 +1,19 @@
+local aai_utils = require("__aai-industry__/data-util")
+
+function disallow_prod(recipe) 
+  if data.raw.recipe[recipe.name] then 
+    for _, prototype in pairs(data.raw["module"]) do
+      if prototype.limitation and string.find(prototype.name, "productivity", 1, true) then
+        for i, name in ipairs(prototype.limitation) do
+          if name == recipe.name then
+            table.remove(prototype.limitation, i)
+          end
+        end
+      end
+    end
+  end
+end
+
 -- circuits
 local circuit = data.raw.recipe["electronic-circuit"]
 circuit.normal.ingredients = {{"iron-plate", 1},{"copper-cable", 3}}
@@ -5,6 +21,8 @@ circuit.normal.enabled = true
 circuit.expensive.ingredients = {{"iron-plate", 2}, {"copper-cable", 8}}
 circuit.expensive.enabled = true
 
+disallow_prod(data.raw.recipe["electronic-circuit-stone"])
+aai_utils.remove_recipe_from_effects(data.raw.technology["electronics"].effects,"electronic-circuit-stone")
 data.raw.recipe["electronic-circuit-stone"] = nil
 
 -- repair pack
