@@ -17,13 +17,13 @@ data:extend({
    order = "a-aai"
   },
   -- Offshore pump requires electricity
-  {
+--[[  {
    type = "bool-setting",
    name = "aivech-ssx-offshore-pump",
    setting_type = "startup",
    default_value = false,
    order = "a-aai"
-  },
+  },]]--
 ---- Space Exploration settings
   -- Low density structure options
   {
