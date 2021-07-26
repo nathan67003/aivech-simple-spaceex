@@ -4,8 +4,8 @@ Date: 2021-07-26
   Minor Features:
     - Added a config. It doesn't do anything yet.
     - Added this changelog.
-  Modding: 
-    - No longer conflicts with Bob's Library Functions Mod. 
+  Modding:
+    - No longer conflicts with Bob's Library Functions Mod.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 2021-07-24
