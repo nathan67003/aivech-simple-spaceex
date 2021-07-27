@@ -1,2 +1,2 @@
 require("recipe/aai-reverts")
-require("tech/aai-reverts")
+require("technology/aai-tech-reverts")
