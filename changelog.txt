@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2021-07-26
+  Major Features:
+    - Vanilla starting technologies no longer depend on AAI burner technologies (configured by startup setting)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2021-07-26
   Minor Features:
