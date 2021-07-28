@@ -78,7 +78,7 @@ if not use_aai then
     {"pipe", 2}
   }
   engine.result = "engine-unit"
-  engine.energy_required = 5
+  engine.energy_required = 10
   engine.enabled = false
 
   -- electric engine unit
