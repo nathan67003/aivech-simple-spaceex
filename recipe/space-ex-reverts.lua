@@ -1,44 +1,48 @@
 -- landfill
 local landfill = data.raw.recipe["landfill"]
-landfill.normal = nil
-landfill.expensive = nil
-landfill.ingredients = {{"stone", 20}}
-landfill.result = "landfill"
-landfill.energy_required = 0.5
+if not  settings.startup["aivech-ssx-aai-recipes"].value then
+  landfill.normal = nil
+  landfill.expensive = nil
+  landfill.ingredients = {{"stone", 20}}
+  landfill.result = "landfill"
+  landfill.energy_required = 0.5
+end
 
 -- modules
 local modules = {}
 local ranks = {"","-2","-3"}
-for _, type in ipairs({"productivity", "speed", "effectivity"}) do
-  for rank, suffix in ipairs(ranks) do 
-    log(type.."-module"..suffix)
-    local mod = data.raw.recipe[type.."-module"..suffix]
-    mod.normal = nil
-    mod.expensive = nil
-    mod.result = type.."-module"..suffix
-    mod.enabled = false
-    mod.energy_required = 15*2^(rank-1)
-    if rank == 1 then
-      mod.ingredients = {{"advanced-circuit", 5},{"electronic-circuit", 5}}
-      -- mod.energy_required = 15
-    --[[elseif rank == 2 then
-      mod.ingredients = 
-      {
-        {type.."-module", 4},
-        {"advanced-circuit", 5},
-        {"processing-unit", 5}
-      }
-      -- mod.energy_required = 30]]--
-    else
-      mod.ingredients = 
-      {
-        {type.."-module"..ranks[rank-1], rank+2},
-        {"advanced-circuit", 5},
-        {"processing-unit", 5}
-      }
-      -- mod.energy_required = 60
+if not settings.startup["aivech-ssx-modules"] then
+  for _, type in ipairs({"productivity", "speed", "effectivity"}) do
+    for rank, suffix in ipairs(ranks) do 
+      log(type.."-module"..suffix)
+      local mod = data.raw.recipe[type.."-module"..suffix]
+      mod.normal = nil
+      mod.expensive = nil
+      mod.result = type.."-module"..suffix
+      mod.enabled = false
+      mod.energy_required = 15*2^(rank-1)
+      if rank == 1 then
+        mod.ingredients = {{"advanced-circuit", 5},{"electronic-circuit", 5}}
+        -- mod.energy_required = 15
+      --[[elseif rank == 2 then
+        mod.ingredients = 
+        {
+          {type.."-module", 4},
+          {"advanced-circuit", 5},
+          {"processing-unit", 5}
+        }
+        -- mod.energy_required = 30]]--
+      else
+        mod.ingredients = 
+        {
+          {type.."-module"..ranks[rank-1], rank+2},
+          {"advanced-circuit", 5},
+          {"processing-unit", 5}
+        }
+        -- mod.energy_required = 60
+      end
+      modules[type..rank] = mod
     end
-    modules[type..rank] = mod
   end
 end
 

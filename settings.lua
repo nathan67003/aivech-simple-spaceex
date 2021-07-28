@@ -41,5 +41,13 @@ data:extend({
    setting_type = "startup",
    default_value = false,
    order = "b-space-ex"
+   },
+  -- Use vanilla modules recipes
+  {
+   type = "bool-setting",
+   name = "aivech-ssx-modules",
+   setting_type = "startup",
+   default_value = false,
+   order = "b-space-ex"
    }
 })
