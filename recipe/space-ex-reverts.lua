@@ -1,3 +1,9 @@
+-- landfill
+local landfill = data.raw.recipe["landfill"]
+landfill.normal = nil
+landfill.expensive = nil
+landfill.
+
 -- modules
 local modules = {}
 local ranks = {"","-2","-3"}

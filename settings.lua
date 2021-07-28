@@ -33,5 +33,13 @@ data:extend({
    default_value = "replace",
    allowed_values = {"ignore","replace","revert"},
    order = "b-space-ex"
-  }
+  },
+  -- Use vanilla landfill recipe
+  {
+   type = "bool-setting",
+   name = "aivech-ssx-cheaper-landfill",
+   setting_type = "startup",
+   default_value = false,
+   order = "b-space-ex"
+   }
 })
