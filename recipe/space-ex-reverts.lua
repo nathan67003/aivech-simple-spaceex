@@ -11,7 +11,7 @@ end
 -- modules
 local modules = {}
 local ranks = {"","-2","-3"}
-if not settings.startup["aivech-ssx-modules"] then
+if not settings.startup["aivech-ssx-modules"].value then
   for _, type in ipairs({"productivity", "speed", "effectivity"}) do
     for rank, suffix in ipairs(ranks) do 
       log(type.."-module"..suffix)
@@ -46,9 +46,24 @@ if not settings.startup["aivech-ssx-modules"] then
   end
 end
 
+-- nuke
+local nuke = data.raw.recipe["atomic-bomb"]
+if not settings.startup["aivech-ssx-expensive-nuke"].value then
+  nuke.normal=nil
+  nuke.expensive=nil
+  nuke.ingredients = 
+  {
+    {"rocket-control-unit", 10},
+    {"explosives", 10},
+    {"uranium-235", 30}
+  }
+  nuke.energy_required=50
+  nuke.result = "atomic-bomb"
+end
+
 data:extend({
   modules["speed1"], modules["speed2"], modules["speed3"],
   modules["productivity1"], modules["productivity2"], modules["productivity3"],
   modules["effectivity1"], modules["effectivity2"], modules["effectivity3"],
-  landfill
+  landfill, nuke
 })

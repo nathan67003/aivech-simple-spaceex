@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2021-08-04
+  Features:
+    - Vanilla recipe for nuke
+  Bugfixes:
+    - Config to disable SpaceEx module recipes should actually work now
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2021-07-28
   Major Features:

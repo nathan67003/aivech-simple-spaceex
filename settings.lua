@@ -26,14 +26,14 @@ data:extend({
   },]]--
 ---- Space Exploration settings
   -- Low density structure options
-  {
+  --[[{
    type = "string-setting",
    name = "aivech-ssx-low-density-structure",
    setting_type = "startup",
    default_value = "replace",
    allowed_values = {"ignore","replace","revert"},
    order = "b-space-ex"
-  },
+  },]]--
   -- Use vanilla landfill recipe
   {
    type = "bool-setting",
@@ -46,6 +46,13 @@ data:extend({
   {
    type = "bool-setting",
    name = "aivech-ssx-modules",
+   setting_type = "startup",
+   default_value = false,
+   order = "b-space-ex"
+   },
+  {
+   type = "bool-setting",
+   name = "aivech-ssx-expensive-nuke",
    setting_type = "startup",
    default_value = false,
    order = "b-space-ex"
