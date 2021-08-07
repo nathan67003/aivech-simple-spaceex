@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2021-08-07
+  Features:
+    - Vanilla technology costs and prerequisites for roboport mk2 and battery mk2 equipment
+  Other:
+    - Added a dependency conflict with Krastorio2 as this mod crashes when it is installed and fixing the recipes for a completely different conversion mod is out of scope for this mod
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2021-08-04
   Features:

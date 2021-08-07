@@ -56,5 +56,12 @@ data:extend({
    setting_type = "startup",
    default_value = false,
    order = "b-space-ex"
+   },
+  {
+   type = "bool-setting",
+   name = "aivech-ssx-equipment-research",
+   setting_type="startup",
+   default_value=false,
+   order = "b-space-ex"
    }
 })
