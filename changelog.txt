@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 2021-08-07
+  Balancing:
+    - Re-enabled the stone green circuit recipe to act as a stone circuit for people who wish to use core mining.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2021-08-07
   Features:

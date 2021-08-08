@@ -23,11 +23,17 @@ if not use_aai then
   circuit.normal.enabled = true
   circuit.expensive.ingredients = {{"iron-plate", 2}, {"copper-cable", 8}}
   circuit.expensive.enabled = true
-
-  disallow_prod(data.raw.recipe["electronic-circuit-stone"])
+  
+  local stone_circuit = data.raw.recipe["electronic-circuit-stone"]
+  stone_circuit.allow_as_intermediate = false
+  stone_circuit.normal.enabled = true
+  stone_circuit.expensive.enabled = true
+  
+  --[[ disallow_prod(data.raw.recipe["electronic-circuit-stone"])
   aai_utils.remove_recipe_from_effects(data.raw.technology["electronics"].effects,"electronic-circuit-stone")
   data.raw.recipe["electronic-circuit-stone"] = nil
-
+  ]]-- 
+  
   -- repair pack
   local repair_pack = data.raw.recipe["repair-pack"]
   repair_pack.normal = nil
