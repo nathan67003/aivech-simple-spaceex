@@ -480,7 +480,7 @@ if not use_aai then
   } 
 
   data:extend({
-    circuit, 
+    circuit, stone_circuit,
     repair_pack, 
     green_sci, yel_sci, 
     engine, elc_eng, 
