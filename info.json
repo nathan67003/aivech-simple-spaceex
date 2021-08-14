@@ -1,6 +1,6 @@
 {
   "name": "aivech-simple-spaceex",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "title": "Aivech's Space Exploration Simplifier",
   "author": "Aivech",
   "description": "This mod is in ALPHA and is incomplete. Use at your own risk. Undoes changes made by AAI to vanilla technologies and recipes so that SpaceEx functions purely as an endgame extender. Does not modify AAI or SpaceEx.",

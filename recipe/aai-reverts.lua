@@ -25,9 +25,12 @@ if not use_aai then
   circuit.expensive.enabled = true
   
   local stone_circuit = data.raw.recipe["electronic-circuit-stone"]
-  stone_circuit.allow_as_intermediate = false
   stone_circuit.normal.enabled = true
+  stone_circuit.normal.allow_as_intermediate = false
+  stone_circuit.normal.allow_decomposition = false
   stone_circuit.expensive.enabled = true
+  stone_circuit.expensive.allow_as_intermediate = false
+  stone_circuit.expensive.allow_decomposition = false
   
   --[[ disallow_prod(data.raw.recipe["electronic-circuit-stone"])
   aai_utils.remove_recipe_from_effects(data.raw.technology["electronics"].effects,"electronic-circuit-stone")
