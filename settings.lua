@@ -63,5 +63,12 @@ data:extend({
    setting_type="startup",
    default_value=false,
    order = "b-space-ex"
+   },
+  {
+   type = "bool-setting",
+   name = "aivech-ssx-safe-rockets",
+   setting_type = "runtime-global",
+   default_value = false,
+   order = "b-space-ex"
    }
 })
