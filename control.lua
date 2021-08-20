@@ -31,6 +31,7 @@ function record_safety_tech(force)
   local safe1 = force.technologies["se-rocket-cargo-safety-1"]
   local safe2 = force.technologies["se-rocket-cargo-safety-2"]
   local safe3 = force.technologies["se-rocket-cargo-safety-3"]
+  if safe3 and safe3.level >= 7067 then return end
   if safe3 and safe3.level > 3 then
     global.safety[force.index] = safe3.level-1
   elseif safe2 and safe2.researched then
