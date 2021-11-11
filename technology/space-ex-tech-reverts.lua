@@ -83,7 +83,7 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
   replace_tech_cost(weapon_shooting_speed6, create_tech_unit(600,60, utility_military_science_ingredients), nil)
   
   local logistics2 = data.raw.technology["logistics-2"]
-  replace_tech_prerequisites(automation2, {
+  replace_tech_prerequisites(logistics2, {
                                            "logistic-science-pack",
                                            "logistics"
                                           })
@@ -162,13 +162,13 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
   
   local stronger_explosives5 = data.raw.technology["stronger-explosives-5"]
   replace_tech_prerequisites(stronger_explosives5, {
-                                                    "stronger-explosive-4"
+                                                    "stronger-explosives-4"
                                                    })
   replace_tech_cost(stronger_explosives5, create_tech_unit(500,60, utility_military_science_ingredients), nil)
   
   local stronger_explosives6 = data.raw.technology["stronger-explosives-6"]
   replace_tech_prerequisites(stronger_explosives6, {
-                                                    "stronger-explosive-5"
+                                                    "stronger-explosives-5"
                                                    })
   replace_tech_cost(stronger_explosives6, create_tech_unit(600,60, utility_military_science_ingredients), nil)
   
@@ -245,6 +245,7 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
                                                        "military-science-pack",
                                                        "solar-panel-equipment"
                                                       })
+  replace_tech_cost(energy_shield_equipment, create_tech_unit(150,15, military_science_ingredients), nil)
   
   local advanced_material_processing2 = data.raw.technology["advanced-material-processing-2"]
   replace_tech_prerequisites(advanced_material_processing2, {
@@ -331,21 +332,21 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
   
   local worker_robots_speed3 = data.raw.technology["worker-robots-speed-3"]
   replace_tech_prerequisites(worker_robots_speed3, {
-                                                    "workers-robot-speed-2"
+                                                    "worker-robots-speed-2"
                                                    })
-  replace_tech_cost(workers_robots_speed3, create_tech_unit(150,60, utility_science_ingredients), nil)
+  replace_tech_cost(worker_robots_speed3, create_tech_unit(150,60, utility_science_ingredients), nil)
   
   local worker_robots_speed4 = data.raw.technology["worker-robots-speed-4"]
   replace_tech_prerequisites(worker_robots_speed4, {
-                                                    "workers-robot-speed-3"
+                                                    "worker-robots-speed-3"
                                                    })
-  replace_tech_cost(workers_robots_speed4, create_tech_unit(250,60, utility_science_ingredients), nil)
+  replace_tech_cost(worker_robots_speed4, create_tech_unit(250,60, utility_science_ingredients), nil)
   
   local worker_robots_speed5 = data.raw.technology["worker-robots-speed-5"]
   replace_tech_prerequisites(worker_robots_speed5, {
-                                                    "workers-robot-speed-4"
+                                                    "worker-robots-speed-4"
                                                    })
-  replace_tech_cost(workers_robots_speed5, create_tech_unit(500,60, production_utility_science_ingredients), nil)
+  replace_tech_cost(worker_robots_speed5, create_tech_unit(500,60, production_utility_science_ingredients), nil)
   
   local worker_robots_storage1 = data.raw.technology["worker-robots-storage-1"]
   replace_tech_prerequisites(worker_robots_storage1, {
@@ -372,6 +373,7 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
                                                            "military-3",
                                                            "power-armor"
                                                           })
+  replace_tech_cost(energy_shield_mk2_equipment, create_tech_unit(200,30, military_chemical_science_ingredients), nil)
   
   local automation3 = data.raw.technology["automation-3"]
   replace_tech_prerequisites(automation3, {
@@ -399,8 +401,8 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
   
   local rocket_control_unit = data.raw.technology["rocket-control-unit"]
   replace_tech_prerequisites(rocket_control_unit, {
-                                                   "speed_module",
-                                                   "utility_science_pack"
+                                                   "speed-module",
+                                                   "utility-science-pack"
                                                   })
   replace_tech_cost(rocket_control_unit, create_tech_unit(300,45, utility_science_ingredients), nil)
   
