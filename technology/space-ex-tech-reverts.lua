@@ -162,13 +162,13 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
   
   local stronger_explosives5 = data.raw.technology["stronger-explosives-5"]
   replace_tech_prerequisites(stronger_explosives5, {
-                                                    "stronger-explosive-4"
+                                                    "stronger-explosives-4"
                                                    })
   replace_tech_cost(stronger_explosives5, create_tech_unit(500,60, utility_military_science_ingredients), nil)
   
   local stronger_explosives6 = data.raw.technology["stronger-explosives-6"]
   replace_tech_prerequisites(stronger_explosives6, {
-                                                    "stronger-explosive-5"
+                                                    "stronger-explosives-5"
                                                    })
   replace_tech_cost(stronger_explosives6, create_tech_unit(600,60, utility_military_science_ingredients), nil)
   
