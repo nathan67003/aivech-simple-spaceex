@@ -240,12 +240,12 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
                                                     })
   replace_tech_cost(follower_robot_count6, create_tech_unit(1000,30, utility_military_science_ingredients), nil)
   
-  local energy_shield_equipment = data.raw.technology["energy-shield-equipment"]
-  replace_tech_prerequisites(energy_shield_equipment, {
-                                                       "military-science-pack",
-                                                       "solar-panel-equipment"
-                                                      })
-  replace_tech_cost(energy_shield_equipment, create_tech_unit(150,15, military_science_ingredients), nil)
+  --local energy_shield_equipment = data.raw.technology["energy-shield-equipment"]
+  --replace_tech_prerequisites(energy_shield_equipment, {
+  --                                                     "military-science-pack",
+  --                                                     "solar-panel-equipment"
+  --                                                    })
+  --replace_tech_cost(energy_shield_equipment, create_tech_unit(150,15, military_science_ingredients), nil)
   
   local advanced_material_processing2 = data.raw.technology["advanced-material-processing-2"]
   replace_tech_prerequisites(advanced_material_processing2, {
@@ -366,14 +366,14 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
                                                      })
   replace_tech_cost(worker_robots_storage3, create_tech_unit(450,60, production_utility_science_ingredients), nil)
   
-  local energy_shield_mk2_equipment = data.raw.technology["energy-shield-mk2-equipment"]
-  replace_tech_prerequisites(energy_shield_mk2_equipment, {
-                                                           "energy-shield-equipment",
-                                                           "low-density-structure",
-                                                           "military-3",
-                                                           "power-armor"
-                                                          })
-  replace_tech_cost(energy_shield_mk2_equipment, create_tech_unit(200,30, military_chemical_science_ingredients), nil)
+  --local energy_shield_mk2_equipment = data.raw.technology["energy-shield-mk2-equipment"]
+  --replace_tech_prerequisites(energy_shield_mk2_equipment, {
+  --                                                         "energy-shield-equipment",
+  --                                                         "low-density-structure",
+  --                                                         "military-3",
+  --                                                         "power-armor"
+  --                                                        })
+  --replace_tech_cost(energy_shield_mk2_equipment, create_tech_unit(200,30, military_chemical_science_ingredients), nil)
   
   local automation3 = data.raw.technology["automation-3"]
   replace_tech_prerequisites(automation3, {
@@ -416,13 +416,13 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
                                           })
   replace_tech_cost(rocket_silo, create_tech_unit(1000,60, production_utility_science_ingredients), nil)
   
-  local fusion_reactor_equipment = data.raw.technology["fusion-reactor-equipment"]
-  replace_tech_prerequisites(fusion_reactor_equipment, {
-                                                        "military-science-pack",
-                                                        "power-armor",
-                                                        "utility-science-pack"
-                                                       })
-  replace_tech_cost(fusion_reactor_equipment, create_tech_unit(200,30, utility_military_science_ingredients), nil)
+  --local fusion_reactor_equipment = data.raw.technology["fusion-reactor-equipment"]
+  --replace_tech_prerequisites(fusion_reactor_equipment, {
+  --                                                      "military-science-pack",
+  --                                                      "power-armor",
+  --                                                      "utility-science-pack"
+  --                                                     })
+  --replace_tech_cost(fusion_reactor_equipment, create_tech_unit(200,30, utility_military_science_ingredients), nil)
   
   local spidertron = data.raw.technology["spidertron"]
   replace_tech_prerequisites(spidertron, {
@@ -452,12 +452,12 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
                engine,automation2,solar_energy,electric_energy_distribution1,concrete,fluid_handling,research_speed5,
                research_speed6,gate,stronger_explosives5,stronger_explosives6,oil_processing,advanced_electronics,modules,
                chemical_science_pack,inserter_capacity_bonus5,inserter_capacity_bonus6,inserter_capacity_bonus7,refined_flammables5,
-               refined_flammables6,follower_robot_count5,follower_robot_count6,energy_shield_equipment,advanced_material_processing2,
+               refined_flammables6,follower_robot_count5,follower_robot_count6,advanced_material_processing2,
                laser,nuclear_power,rocket_fuel,laser_turret,braking_force5,braking_force6,braking_force7,electric_engine,
                laser_shooting_speed5,laser_shooting_speed6,laser_shooting_speed7,energy_weapons_damage5,energy_weapons_damage6,
                worker_robots_speed3,worker_robots_speed4,worker_robots_speed5,worker_robots_storage1,worker_robots_storage2,
-               worker_robots_storage3,energy_shield_mk2_equipment,automation3,productivity_module3,effectivity_module3,
-               speed_module3,rocket_control_unit,rocket_silo,fusion_reactor_equipment,spidertron,roboport2,battery2})
+               worker_robots_storage3,automation3,productivity_module3,effectivity_module3,
+               speed_module3,rocket_control_unit,rocket_silo,spidertron,roboport2,battery2})
 end
 
   
