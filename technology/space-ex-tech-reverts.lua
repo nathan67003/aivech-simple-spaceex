@@ -265,7 +265,7 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
                                             })
   
   local rocket_fuel = data.raw.technology["rocket-fuel"]
-  replace_tech_prerequisites(rocket-fuel, {
+  replace_tech_prerequisites(rocket_fuel, {
                                            "advanced-oil-processing",
                                            "flammables"
                                           })
