@@ -83,7 +83,7 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
   replace_tech_cost(weapon_shooting_speed6, create_tech_unit(600,60, utility_military_science_ingredients), nil)
   
   local logistics2 = data.raw.technology["logistics-2"]
-  replace_tech_prerequisites(automation2, {
+  replace_tech_prerequisites(logistics2, {
                                            "logistic-science-pack",
                                            "logistics"
                                           })
