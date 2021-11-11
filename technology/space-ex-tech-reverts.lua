@@ -399,8 +399,8 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
   
   local rocket_control_unit = data.raw.technology["rocket-control-unit"]
   replace_tech_prerequisites(rocket_control_unit, {
-                                                   "speed_module",
-                                                   "utility_science_pack"
+                                                   "speed-module",
+                                                   "utility-science-pack"
                                                   })
   replace_tech_cost(rocket_control_unit, create_tech_unit(300,45, utility_science_ingredients), nil)
   
