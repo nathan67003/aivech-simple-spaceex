@@ -333,19 +333,19 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
   replace_tech_prerequisites(worker_robots_speed3, {
                                                     "worker-robots-speed-2"
                                                    })
-  replace_tech_cost(workers_robots_speed3, create_tech_unit(150,60, utility_science_ingredients), nil)
+  replace_tech_cost(worker_robots_speed3, create_tech_unit(150,60, utility_science_ingredients), nil)
   
   local worker_robots_speed4 = data.raw.technology["worker-robots-speed-4"]
   replace_tech_prerequisites(worker_robots_speed4, {
                                                     "worker-robots-speed-3"
                                                    })
-  replace_tech_cost(workers_robots_speed4, create_tech_unit(250,60, utility_science_ingredients), nil)
+  replace_tech_cost(worker_robots_speed4, create_tech_unit(250,60, utility_science_ingredients), nil)
   
   local worker_robots_speed5 = data.raw.technology["worker-robots-speed-5"]
   replace_tech_prerequisites(worker_robots_speed5, {
                                                     "worker-robots-speed-4"
                                                    })
-  replace_tech_cost(workers_robots_speed5, create_tech_unit(500,60, production_utility_science_ingredients), nil)
+  replace_tech_cost(worker_robots_speed5, create_tech_unit(500,60, production_utility_science_ingredients), nil)
   
   local worker_robots_storage1 = data.raw.technology["worker-robots-storage-1"]
   replace_tech_prerequisites(worker_robots_storage1, {
