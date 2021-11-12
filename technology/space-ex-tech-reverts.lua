@@ -43,6 +43,17 @@ local production_utility_science_ingredients = {"automation-science-pack","logis
 local production_utility_military_science_ingredients = {"automation-science-pack","logistic-science-pack","military-science-pack","chemical-science-pack","production-science-pack","utility-science-pack"}
 
 if not settings.startup["aivech-ssx-equipment-research"].value then
+  
+  --burner inserters locked behind basic automation
+  
+  --inserters locked behind electricity
+  
+  --small electric pole locked behind electricity
+  
+  --fuel refining was locked behind its own tech - petroleum gas should be behind oil processing, the other 2 behind advanced oil
+  
+  --electronics shouldn't unlock any items, but still shows as unlocking electronic circuits (though they're unlocked from the start)
+  
   local automation = data.raw.technology["automation"]
   replace_tech_cost(automation, create_tech_unit(10,10, automation_science_ingredients), nil)
   
