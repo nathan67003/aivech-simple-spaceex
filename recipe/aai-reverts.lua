@@ -480,7 +480,27 @@ if not use_aai then
     {"steel-plate", 50},
     {"advanced-circuit", 100},
     {"iron-gear-wheel", 100}
-  } 
+  }
+  
+  --spidertron
+  
+  --heavy armor
+  
+  --modular armor
+  
+  --power armor
+  
+  --portable fusion reactor
+  
+  --energy shield
+  
+  --energy shield mk2
+  
+  --radar
+  
+  --rocket control unit
+  
+  --low density structure
 
   data:extend({
     circuit, stone_circuit,
