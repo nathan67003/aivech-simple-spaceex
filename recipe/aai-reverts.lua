@@ -550,10 +550,10 @@ if not use_aai then
   power_armor_mk2.enabled = false
   power_armor_mk2.ingredients =
   {
-    {"effectivity-module-2", 25}
-    {"electric-engine-unit", 40}
-    {"low-density-structure", 30}
-    {"processing-unit", 60}
+    {"effectivity-module-2", 25},
+    {"electric-engine-unit", 40},
+    {"low-density-structure", 30},
+    {"processing-unit", 60},
     {"speed-module-2", 25}
   }
   
@@ -566,8 +566,8 @@ if not use_aai then
   --fusion_reactor_equipment.enabled = false
   --fusion_reactor_equipment.ingredients =
   --{
-  --  {"low-density-structure", 50}
-  --  {"processor-unit", 200}
+  --  {"low-density-structure", 50},
+  --  {"processing-unit", 200}
   --}
   
   --energy shield
@@ -579,7 +579,7 @@ if not use_aai then
   --energy_shield_equipment.enabled = false
   --energy_shield_equipment.ingredients =
   --{
-  --  {"advanced-circuit", 5}
+  --  {"advanced-circuit", 5},
   --  {"steel-plate", 10}
   --}
   
@@ -592,8 +592,8 @@ if not use_aai then
   --energy_shield_mk2_equipment.enabled = false
   --energy_shield_mk2_equipment.ingredients =
   --{
-  --  {"energy-shield-equipment", 10}
-  --  {"low-density-structure", 5}
+  --  {"energy-shield-equipment", 10},
+  --  {"low-density-structure", 5},
   --  {"processing-unit", 5}
   }
   
@@ -606,7 +606,7 @@ if not use_aai then
   rocket_control_unit.enabled = false
   rocket_control_unit.ingredients =
   {
-    {"processor-unit", 1}
+    {"processing-unit", 1},
     {"speed-module", 1}
   }
   
@@ -619,8 +619,8 @@ if not use_aai then
   low_density_structure.enabled = false
   low_density_structure.ingredients =
   {
-    {"copper-plate", 20}
-    {"plastic-bar", 5}
+    {"copper-plate", 20},
+    {"plastic-bar", 5},
     {"steel-plate", 2}
   }
 
