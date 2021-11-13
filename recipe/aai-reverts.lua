@@ -558,43 +558,43 @@ if not use_aai then
   }
   
   --portable fusion reactor
-  local fusion_reactor_equipment = data.raw.recipe["fusion-reactor-equipment"]
-  fusion_reactor_equipment.normal = nil
-  fusion_reactor_equipment.expensive = nil
-  fusion_reactor_equipment.energy_required = 10
-  fusion_reactor_equipment.result = "fusion-reactor-equipment"
-  fusion_reactor_equipment.enabled = false
-  fusion_reactor_equipment.ingredients =
-  {
-    {"low-density-structure", 50}
-    {"processor-unit", 200}
-  }
+  --local fusion_reactor_equipment = data.raw.recipe["fusion-reactor-equipment"]
+  --fusion_reactor_equipment.normal = nil
+  --fusion_reactor_equipment.expensive = nil
+  --fusion_reactor_equipment.energy_required = 10
+  --fusion_reactor_equipment.result = "fusion-reactor-equipment"
+  --fusion_reactor_equipment.enabled = false
+  --fusion_reactor_equipment.ingredients =
+  --{
+  --  {"low-density-structure", 50}
+  --  {"processor-unit", 200}
+  --}
   
   --energy shield
-  local energy_shield_equipment = data.raw.recipe["energy-shield-equipment"]
-  energy_shield_equipment.normal = nil
-  energy_shield_equipment.expensive = nil
-  energy_shield_equipment.energy_required = 10
-  energy_shield_equipment.result = "energy-shield-equipment"
-  energy_shield_equipment.enabled = false
-  energy_shield_equipment.ingredients =
-  {
-    {"advanced-circuit", 5}
-    {"steel-plate", 10}
-  }
+  --local energy_shield_equipment = data.raw.recipe["energy-shield-equipment"]
+  --energy_shield_equipment.normal = nil
+  --energy_shield_equipment.expensive = nil
+  --energy_shield_equipment.energy_required = 10
+  --energy_shield_equipment.result = "energy-shield-equipment"
+  --energy_shield_equipment.enabled = false
+  --energy_shield_equipment.ingredients =
+  --{
+  --  {"advanced-circuit", 5}
+  --  {"steel-plate", 10}
+  --}
   
   --energy shield mk2
-  local energy_shield_mk2_equipment = data.raw.recipe["energy-shield-mk2-equipment"]
-  energy_shield_mk2_equipment.normal = nil
-  energy_shield_mk2_equipment.expensive = nil
-  energy_shield_mk2_equipment.energy_required = 10
-  energy_shield_mk2_equipment.result = "energy-shield-mk2-equipment"
-  energy_shield_mk2_equipment.enabled = false
-  energy_shield_mk2_equipment.ingredients =
-  {
-    {"energy-shield-equipment", 10}
-    {"low-density-structure", 5}
-    {"processing-unit", 5}
+  --local energy_shield_mk2_equipment = data.raw.recipe["energy-shield-mk2-equipment"]
+  --energy_shield_mk2_equipment.normal = nil
+  --energy_shield_mk2_equipment.expensive = nil
+  --energy_shield_mk2_equipment.energy_required = 10
+  --energy_shield_mk2_equipment.result = "energy-shield-mk2-equipment"
+  --energy_shield_mk2_equipment.enabled = false
+  --energy_shield_mk2_equipment.ingredients =
+  --{
+  --  {"energy-shield-equipment", 10}
+  --  {"low-density-structure", 5}
+  --  {"processing-unit", 5}
   }
   
   --rocket control unit
@@ -660,9 +660,6 @@ if not use_aai then
     modular_armor,
     power_armor,
     power_armor_mk2,
-    fusion_reactor_equipment,
-    energy_shield_equipment,
-    energy_shield_mk2_equipment,
     rocket_control_unit,
     low_density_structure
   })
