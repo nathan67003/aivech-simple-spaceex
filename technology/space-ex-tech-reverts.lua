@@ -54,6 +54,8 @@ if not settings.startup["aivech-ssx-equipment-research"].value then
   
   --electronics shouldn't unlock any items, but still shows as unlocking electronic circuits (though they're unlocked from the start)
   
+  --radar is locked behind its own tech
+  
   local automation = data.raw.technology["automation"]
   replace_tech_cost(automation, create_tech_unit(10,10, automation_science_ingredients), nil)
   
