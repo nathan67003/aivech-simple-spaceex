@@ -567,7 +567,7 @@ if not use_aai then
   fusion_reactor_equipment.ingredients =
   {
     {"low-density-structure", 50},
-    {"processor-unit", 200}
+    {"processing-unit", 200}
   }
   
   --energy shield
@@ -606,7 +606,7 @@ if not use_aai then
   rocket_control_unit.enabled = false
   rocket_control_unit.ingredients =
   {
-    {"processor-unit", 1},
+    {"processing-unit", 1},
     {"speed-module", 1}
   }
   
