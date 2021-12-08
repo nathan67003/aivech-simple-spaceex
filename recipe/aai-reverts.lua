@@ -598,31 +598,31 @@ if not use_aai then
   }
   
   --rocket control unit
-  local rocket_control_unit = data.raw.recipe["rocket-control-unit"]
-  rocket_control_unit.normal = nil
-  rocket_control_unit.expensive = nil
-  rocket_control_unit.energy_required = 30
-  rocket_control_unit.result = "rocket-control-unit"
-  rocket_control_unit.enabled = false
-  rocket_control_unit.ingredients =
-  {
-    {"processing-unit", 1},
-    {"speed-module", 1}
-  }
+  --local rocket_control_unit = data.raw.recipe["rocket-control-unit"]
+  --rocket_control_unit.normal = nil
+  --rocket_control_unit.expensive = nil
+  --rocket_control_unit.energy_required = 30
+  --rocket_control_unit.result = "rocket-control-unit"
+  --rocket_control_unit.enabled = false
+  --rocket_control_unit.ingredients =
+  --{
+  --  {"processing-unit", 1},
+  --  {"speed-module", 1}
+  --}
   
   --low density structure
-  local low_density_structure = data.raw.recipe["low-density-structure"]
-  low_density_structure.normal = nil
-  low_density_structure.expensive = nil
-  low_density_structure.energy_required = 20
-  low_density_structure.result = "low-density-structure"
-  low_density_structure.enabled = false
-  low_density_structure.ingredients =
-  {
-    {"copper-plate", 20},
-    {"plastic-bar", 5},
-    {"steel-plate", 2}
-  }
+  --local low_density_structure = data.raw.recipe["low-density-structure"]
+  --low_density_structure.normal = nil
+  --low_density_structure.expensive = nil
+  --low_density_structure.energy_required = 20
+  --low_density_structure.result = "low-density-structure"
+  --low_density_structure.enabled = false
+  --low_density_structure.ingredients =
+  --{
+  --  {"copper-plate", 20},
+  --  {"plastic-bar", 5},
+  --  {"steel-plate", 2}
+  --}
 
   data:extend({
     circuit, stone_circuit,
@@ -659,8 +659,6 @@ if not use_aai then
     heavy_armor,
     modular_armor,
     power_armor,
-    power_armor_mk2,
-    rocket_control_unit,
-    low_density_structure
+    power_armor_mk2
   })
 end
